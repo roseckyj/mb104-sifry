@@ -17,7 +17,13 @@ export class Input extends React.Component<IInputProps, {}> {
                 <div className="input-group-prepend">
                     <span className="input-group-text">{this.props.label}</span>
                 </div>
-                <input type="number" className="form-control" aria-label="" onChange={this.changeHandler} />
+                <input
+                    type="number"
+                    className="form-control"
+                    aria-label=""
+                    onChange={this.changeHandler}
+                    value={this.props.value}
+                />
             </div>
         );
     }

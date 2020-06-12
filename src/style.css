@@ -4,3 +4,13 @@ p {
 .solution {
     margin: 50px 100px;
 }
+.matrix td {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.matrix {
+    display: inline-table;
+    vertical-align: middle;
+}

@@ -10,6 +10,10 @@ import { ElGamal_encode } from './solvers/ElGamal/encode';
 import { ElGamal_decode } from './solvers/ElGamal/decode';
 import { Rabin_decode } from './solvers/Rabin/decode';
 import { Rabin_encode } from './solvers/Rabin/encode';
+import { generateMatrix } from './solvers/polynomCodes/generateMatrix';
+import { encodeWithPolynom } from './solvers/polynomCodes/encode';
+import { Matrix } from './solvers/polynomCodes/Matrix';
+import { MatrixEncode } from './solvers/polynomCodes/MatrixEncode';
 
 export type AppState = {};
 
@@ -22,6 +26,8 @@ const tabs: { title: string; content: JSX.Element }[] = [
     { title: 'ElGamal odšifrování', content: <ElGamal_decode /> },
     { title: 'Rabin zašifrování', content: <Rabin_encode /> },
     { title: 'Rabin odšifrování', content: <Rabin_decode /> },
+    { title: 'Polynomiální matice', content: <Matrix /> },
+    { title: 'Polynom -> zakódování', content: <MatrixEncode /> },
 ];
 
 export class App extends React.Component<{}, AppState> {
