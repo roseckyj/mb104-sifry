@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,EACI,QACJ,CACA,UACI,iBACJ","file":"main.7b158b46.chunk.css","sourcesContent":["p {\n    margin: 0;\n}\n.solution {\n    margin: 50px 100px;\n}\n"]}
