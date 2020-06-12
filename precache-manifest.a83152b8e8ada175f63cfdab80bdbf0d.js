@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac947abec37389f157b1c2e215d242c5",
+    "revision": "bdfa8b195cf318c18ad6440a167d7ce7",
     "url": "/mb104-sifry/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mb104-sifry/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "c0760b7e77c9b5377211",
+    "revision": "9d6ad61f10e3806159a7",
     "url": "/mb104-sifry/static/css/main.19080352.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mb104-sifry/static/js/2.8cad08a3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0760b7e77c9b5377211",
-    "url": "/mb104-sifry/static/js/main.7523fe8d.chunk.js"
+    "revision": "9d6ad61f10e3806159a7",
+    "url": "/mb104-sifry/static/js/main.649b9fd3.chunk.js"
   },
   {
     "revision": "b023f941e8e7a9b4ada4",
