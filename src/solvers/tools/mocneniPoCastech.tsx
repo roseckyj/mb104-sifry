@@ -4,8 +4,8 @@ import { soustavaKongruenci } from './soustavaKongruenci';
 export function mocneniPoCastech(base: number, exponent: number, p: number, q: number, varName: string) {
     let steps: JSX.Element[] = [];
 
-    const p1 = Math.pow((base + p) % p, exponent % (p - 1)) % p;
-    const q1 = Math.pow((base + q) % q, exponent % (q - 1)) % q;
+    const p1 = Math.pow((base % p + p) % p, (exponent % (p - 1) + p - 1) % (p - 1)) % p;
+    const q1 = Math.pow((base % q + q) % q, (exponent % (q - 1) + q - 1) % (q - 1)) % q;
 
     steps.push(
         <p>
