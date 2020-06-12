@@ -25,7 +25,7 @@ export class Matrix extends React.Component<{}, IMatrixState> {
 
     render() {
         let controls: JSX.Element[] = [];
-        for (let i = 0; i < this.state.height; i++) {
+        for (let i = 0; i < this.state.height - this.state.width + 1; i++) {
             controls.push(
                 <Input
                     label={i === 0 ? '1' : i === 1 ? 'x' : 'x^' + i}

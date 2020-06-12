@@ -29,7 +29,7 @@ export class MatrixEncode extends React.Component<{}, IMatrixEncodeState> {
     render() {
         let controls: JSX.Element[] = [];
         controls.push(<p>Generující polynom:</p>);
-        for (let i = 0; i < this.state.height; i++) {
+        for (let i = 0; i < this.state.height - this.state.width + 1; i++) {
             controls.push(
                 <Input
                     label={i === 0 ? '1' : i === 1 ? 'x' : 'x^' + i}
@@ -84,7 +84,7 @@ export class MatrixEncode extends React.Component<{}, IMatrixEncodeState> {
                     {this.state.matrix.length > 0 &&
                         flipMatrix(this.state.matrix, this.state.width, this.state.height).map((row, y) => (
                             <tr
-                                className={y === this.state.height - this.state.width - 1 ? 'border-bottom' : undefined}
+                                className={y === this.state.height - this.state.width - 1 ? 'matrix-border' : undefined}
                             >
                                 {row.map((cell, x) => (
                                     <td>{cell ? '1' : '0'}</td>
@@ -110,7 +110,7 @@ export class MatrixEncode extends React.Component<{}, IMatrixEncodeState> {
                             polynomToFixedLength(this.state.message, this.state.width),
                         ).map((row, y) => (
                             <tr
-                                className={y === this.state.height - this.state.width - 1 ? 'border-bottom' : undefined}
+                                className={y === this.state.height - this.state.width - 1 ? 'matrix-border' : undefined}
                             >
                                 <td>{row ? '1' : '0'}</td>
                             </tr>

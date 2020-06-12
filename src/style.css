@@ -23,8 +23,8 @@ p {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -5px;
-    width: 10px;
+    left: -8px;
+    width: 15px;
     border-left: solid 2px black;
     border-radius: 100%;
 }
@@ -35,8 +35,11 @@ p {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -5px;
-    width: 10px;
+    right: -8px;
+    width: 15px;
     border-right: solid 2px black;
     border-radius: 100%;
+}
+.matrix .matrix-border {
+    border-bottom: solid 1px black;
 }
