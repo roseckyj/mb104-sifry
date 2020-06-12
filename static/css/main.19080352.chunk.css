@@ -1,0 +1,2 @@
+p{margin:0}.solution{margin:50px 100px}.matrix td{width:20px;height:20px;text-align:center}.matrix,.matrix td{vertical-align:middle}.matrix{display:inline-table;position:relative;margin:3px 10px}.matrix:before{left:-8px;border-left:2px solid #000}.matrix:after,.matrix:before{content:"";display:block;position:absolute;top:0;bottom:0;width:15px;border-radius:100%}.matrix:after{right:-8px;border-right:2px solid #000}.matrix .matrix-border{border-bottom:1px solid #000}
+/*# sourceMappingURL=main.19080352.chunk.css.map */
