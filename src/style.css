@@ -13,4 +13,30 @@ p {
 .matrix {
     display: inline-table;
     vertical-align: middle;
+    position: relative;
+    margin: 3px 10px;
+}
+
+.matrix:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    width: 10px;
+    border-left: solid 2px black;
+    border-radius: 100%;
+}
+
+.matrix:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -5px;
+    width: 10px;
+    border-right: solid 2px black;
+    border-radius: 100%;
 }
