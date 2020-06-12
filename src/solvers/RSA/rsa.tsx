@@ -9,7 +9,7 @@ export function rsa_encode(e: number, p: number, q: number, m: number) {
         steps: (
             <>
                 <p>
-                    Máme n = p × q = {p * q}, e = {e} a m ≡ {m} (mod {p * q}).
+                    Máme n = p · q = {p * q}, e = {e} a m ≡ {m} (mod {p * q}).
                 </p>
                 <p>
                     Zašifrovaná zpráva pak je c ≡ {m}^{e} (mod {p * q}).
@@ -31,8 +31,8 @@ export function rsa_decode(e: number, p: number, q: number, c: number) {
             steps: (
                 <>
                     <p>
-                        K veřejnému klíči e = {e} potřebujeme najít soukromý klíč d, tj. inverzi modulo φ({p}×{q}) ={' '}
-                        {p - 1}×{q - 1} = {(p - 1) * (q - 1)}:
+                        K veřejnému klíči e = {e} potřebujeme najít soukromý klíč d, tj. inverzi modulo φ({p}·{q}) ={' '}
+                        {p - 1}·{q - 1} = {(p - 1) * (q - 1)}:
                     </p>
                     {soukromy.steps}
                 </>
@@ -47,8 +47,8 @@ export function rsa_decode(e: number, p: number, q: number, c: number) {
         steps: (
             <>
                 <p>
-                    K veřejnému klíči e = {e} potřebujeme najít soukromý klíč d, tj. inverzi modulo φ({p}×{q}) = {p - 1}
-                    ×{q - 1} = {(p - 1) * (q - 1)}:
+                    K veřejnému klíči e = {e} potřebujeme najít soukromý klíč d, tj. inverzi modulo φ({p}·{q}) = {p - 1}
+                    ·{q - 1} = {(p - 1) * (q - 1)}:
                 </p>
                 {soukromy.steps}
                 <p>

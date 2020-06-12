@@ -87,7 +87,7 @@ export function elGamal_decode(p: number, g: number, a: number, gb: number, c: n
                 <p>Nejprve spočítáme společnou část soukromého klíče pomocí protokolu Diffie-Hellman</p>
                 {privateKey.steps}
                 <p>
-                    Zprávu rozšifrujeme, jako kongruenci {c} ≡ c ≡ g^ab × m ≡ {privateKey.result} × m (mod {p}).
+                    Zprávu rozšifrujeme, jako kongruenci {c} ≡ c ≡ g^ab · m ≡ {privateKey.result} · m (mod {p}).
                 </p>
                 {congruency.steps}
                 <p>

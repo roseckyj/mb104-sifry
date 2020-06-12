@@ -38,7 +38,7 @@ export function soustavaKongruenci(r1: number, mod1: number, r2: number, mod2: n
                 {res.map((row) => (
                     <p>
                         {row.left}
-                        {varName} ≡ {row.r1}×{mod1} + {row.r2}×{mod2}
+                        {varName} ≡ {row.r1}·{mod1} + {row.r2}·{mod2}
                     </p>
                 ))}
                 <br />

@@ -92,7 +92,7 @@ export class MatrixEncode extends React.Component<{}, IMatrixEncodeState> {
                             </tr>
                         ))}
                 </table>{' '}
-                ×{' '}
+                ·{' '}
                 <table className="matrix">
                     {polynomToFixedLength(this.state.message, this.state.width).map((row, y) => (
                         <tr>

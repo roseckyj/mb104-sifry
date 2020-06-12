@@ -50,7 +50,7 @@ export function mocneniPostupne(base: number, exponent: number, mod: number) {
 
     steps.push(
         <p>
-            ≡ 1 × {base}^{exponent}
+            ≡ 1 · {base}^{exponent}
         </p>,
     );
 
@@ -60,7 +60,7 @@ export function mocneniPostupne(base: number, exponent: number, mod: number) {
         if (exponent % 2 == 0) {
             steps.push(
                 <p>
-                    ≡ {left} × ({base}^2)^{exponent / 2} ≡ {left % mod} × ({(base * base) % mod}
+                    ≡ {left} · ({base}^2)^{exponent / 2} ≡ {left % mod} · ({(base * base) % mod}
                     )^{exponent / 2}
                 </p>,
             );
@@ -70,7 +70,7 @@ export function mocneniPostupne(base: number, exponent: number, mod: number) {
         } else {
             steps.push(
                 <p>
-                    ≡ {left} × {base} × ({base}^2)^{(exponent - 1) / 2} ≡ {(left * base) % mod} × ({(base * base) % mod}
+                    ≡ {left} · {base} · ({base}^2)^{(exponent - 1) / 2} ≡ {(left * base) % mod} · ({(base * base) % mod}
                     )^{(exponent - 1) / 2}
                 </p>,
             );

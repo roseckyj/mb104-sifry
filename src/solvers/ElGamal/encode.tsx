@@ -84,7 +84,7 @@ export function elGamal_encode(p: number, g: number, a: number, gb: number, m: n
                 <p>Nejprve spočítáme společnou část soukromého klíče pomocí protokolu Diffie-Hellman</p>
                 {privateKey.steps}
                 <p>
-                    Zprávu zašifrujeme, jako součin c ≡ {privateKey.result} × {m} (mod {p})
+                    Zprávu zašifrujeme, jako součin c ≡ {privateKey.result} · {m} (mod {p})
                 </p>
                 <p>
                     c ≡ {(privateKey.result * m) % p} (mod {p})
