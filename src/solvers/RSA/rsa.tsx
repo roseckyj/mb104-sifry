@@ -56,7 +56,7 @@ export function rsa_decode(e: number, p: number, q: number, c: number) {
                 </p>
                 {mocneni.steps}
                 <p>
-                    Dešifrovaná zpráva je tedy m ≡ {(mocneni.result % (p * q) + p * q) % p * q} (mod {p * q})
+                    Dešifrovaná zpráva je tedy m ≡ {(mocneni.result % (p * q) + p*q) % -(p * q)} (mod {p * q})
                 </p>
             </>
         ),
