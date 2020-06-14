@@ -3,28 +3,37 @@ import { Input } from '../tools/input';
 
 export type IPrimitiveRootState = {
     p: number;
+    e: number;
     steps: JSX.Element;
 };
 
 export class PrimitiveRoot extends React.Component<{}, IPrimitiveRootState> {
     state: IPrimitiveRootState = {
         p: 0,
+        e: 0,
         steps: <></>,
     };
 
     update() {
-        this.setState({ steps: primitiveRoot(this.state.p).steps });
+        this.setState({ steps: primitiveRoot(this.state.p, this.state.e).steps });
     }
 
     render() {
         return (
             <>
                 <Input
-                    label="p (prvočíslo) = "
+                    label="n (číslo) = "
                     onChange={(value) => {
-                        this.setState({ p: value });
+                        this.setState({ p: value, e: value - 1 });
                     }}
                     value={this.state.p}
+                />
+                <Input
+                    label="φ(n) (eulerova funkce n) = "
+                    onChange={(value) => {
+                        this.setState({ e: value });
+                    }}
+                    value={this.state.e}
                 />
 
                 <button type="button" className="btn btn-primary" onClick={() => this.update()}>
@@ -37,8 +46,8 @@ export class PrimitiveRoot extends React.Component<{}, IPrimitiveRootState> {
     }
 }
 
-function primitiveRoot(p: number) {
-    const decomposition = primeDecomposition(p - 1);
+function primitiveRoot(p: number, euler: number) {
+    const decomposition = primeDecomposition(euler);
     let steps: JSX.Element[] = [];
     let root = 0;
     let int = 2;
@@ -46,7 +55,7 @@ function primitiveRoot(p: number) {
         steps.push(<hr />, <p>a ≡ {int}:</p>);
         const isPrimitiveRoot = decompositionToPrimes(decomposition)
             .map((prime, index) => {
-                const ceil = (p - 1) / prime;
+                const ceil = euler / prime;
                 const res = checkPrimitiveRoot(int, ceil, p);
                 if (index === 0) {
                     res.powers.forEach((pow, i) => {
@@ -89,12 +98,12 @@ function primitiveRoot(p: number) {
         steps: (
             <>
                 <p>
-                    Protože {p} je prvočíslo, máme φ({p}) = {p} - 1 = {p - 1}.
+                    Najdeme φ({p}) = {euler}.
                 </p>
                 <p>
-                    Hledáme číslo a řádu {p - 1}. Podle Eulerovy věty a^{p - 1} ≡ 1, budeme kontrolovat, zda{' '}
+                    Hledáme číslo a řádu {euler}. Podle Eulerovy věty a^{euler} ≡ 1, budeme kontrolovat, zda{' '}
                     {decompositionToPrimes(decomposition)
-                        .map((prime) => 'a^' + ((p - 1) / prime).toString() + ' !≡ 1')
+                        .map((prime) => 'a^' + (euler / prime).toString() + ' !≡ 1')
                         .join(', ')}
                     .
                 </p>
@@ -107,9 +116,9 @@ function primitiveRoot(p: number) {
                     Primitivním kořenem mod {p} je číslo a = {root}
                 </p>
                 <hr />
-                <p>Všechny primitivní kořeny jsou a^n, kde n je nesoudělné s {p - 1}:</p>
+                <p>Všechny primitivní kořeny jsou a^n, kde n je nesoudělné s {euler}:</p>
                 <p>
-                    {allPrimitiveRoots(p)
+                    {allPrimitiveRoots(p, euler)
                         .map((pow) => 'a^' + pow)
                         .join(', ')}
                 </p>
@@ -172,11 +181,11 @@ function checkPrimitiveRoot(int: number, ceil: number, mod: number) {
     };
 }
 
-function allPrimitiveRoots(mod: number) {
+function allPrimitiveRoots(mod: number, euler: number) {
     let res: number[] = [];
     res.push(1);
-    const factor = decompositionToPrimes(primeDecomposition(mod - 1));
-    for (let i = 2; i < mod; i++) {
+    const factor = decompositionToPrimes(primeDecomposition(euler));
+    for (let i = 2; i < euler; i++) {
         const f2 = decompositionToPrimes(primeDecomposition(i));
         if (factor.filter((value) => -1 !== f2.indexOf(value)).length === 0) {
             res.push(i);
