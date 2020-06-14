@@ -14,10 +14,12 @@ import { generateMatrix } from './solvers/polynomCodes/generateMatrix';
 import { encodeWithPolynom } from './solvers/polynomCodes/encode';
 import { Matrix } from './solvers/polynomCodes/Matrix';
 import { MatrixEncode } from './solvers/polynomCodes/MatrixEncode';
+import { PrimitiveRoot } from './solvers/primitiveRoot/primitiveRoot';
 
 export type AppState = {};
 
 const tabs: { title: string; content: JSX.Element }[] = [
+    { title: 'Primitivní kořen', content: <PrimitiveRoot /> },
     { title: 'Soustava 2 kongruencí', content: <SoustavaKongruenci /> },
     { title: 'RSA zašifrování', content: <RSA_encode /> },
     { title: 'RSA odšifrování', content: <RSA_decode /> },
@@ -27,7 +29,7 @@ const tabs: { title: string; content: JSX.Element }[] = [
     { title: 'Rabin zašifrování', content: <Rabin_encode /> },
     { title: 'Rabin odšifrování', content: <Rabin_decode /> },
     { title: 'Polynomiální matice', content: <Matrix /> },
-    { title: 'Polynom -> zakódování', content: <MatrixEncode /> },
+    { title: 'Polynom zakódování', content: <MatrixEncode /> },
 ];
 
 export class App extends React.Component<{}, AppState> {
