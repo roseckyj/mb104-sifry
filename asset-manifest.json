@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mb104-sifry/static/css/main.19080352.chunk.css",
-    "main.js": "/mb104-sifry/static/js/main.47590ad9.chunk.js",
-    "main.js.map": "/mb104-sifry/static/js/main.47590ad9.chunk.js.map",
+    "main.js": "/mb104-sifry/static/js/main.c0df792e.chunk.js",
+    "main.js.map": "/mb104-sifry/static/js/main.c0df792e.chunk.js.map",
     "runtime-main.js": "/mb104-sifry/static/js/runtime-main.5bf4d128.js",
     "runtime-main.js.map": "/mb104-sifry/static/js/runtime-main.5bf4d128.js.map",
     "static/css/2.af3c1da9.chunk.css": "/mb104-sifry/static/css/2.af3c1da9.chunk.css",
     "static/js/2.8cad08a3.chunk.js": "/mb104-sifry/static/js/2.8cad08a3.chunk.js",
     "static/js/2.8cad08a3.chunk.js.map": "/mb104-sifry/static/js/2.8cad08a3.chunk.js.map",
     "index.html": "/mb104-sifry/index.html",
-    "precache-manifest.aa4942c186956ef1aab27c499fc71eef.js": "/mb104-sifry/precache-manifest.aa4942c186956ef1aab27c499fc71eef.js",
+    "precache-manifest.4999a51b50335fd8d2b4f37c64851e6e.js": "/mb104-sifry/precache-manifest.4999a51b50335fd8d2b4f37c64851e6e.js",
     "service-worker.js": "/mb104-sifry/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/mb104-sifry/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.19080352.chunk.css.map": "/mb104-sifry/static/css/main.19080352.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.8cad08a3.chunk.js",
     "static/css/main.19080352.chunk.css",
-    "static/js/main.47590ad9.chunk.js"
+    "static/js/main.c0df792e.chunk.js"
   ]
 }
