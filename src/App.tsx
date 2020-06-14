@@ -15,11 +15,13 @@ import { encodeWithPolynom } from './solvers/polynomCodes/encode';
 import { Matrix } from './solvers/polynomCodes/Matrix';
 import { MatrixEncode } from './solvers/polynomCodes/MatrixEncode';
 import { PrimitiveRoot } from './solvers/primitiveRoot/primitiveRoot';
+import { Kongruence } from './solvers/others/kongruence';
 
 export type AppState = {};
 
 const tabs: { title: string; content: JSX.Element }[] = [
     { title: 'Primitivní kořen', content: <PrimitiveRoot /> },
+    { title: 'Kongruence', content: <Kongruence /> },
     { title: 'Soustava 2 kongruencí', content: <SoustavaKongruenci /> },
     { title: 'RSA zašifrování', content: <RSA_encode /> },
     { title: 'RSA odšifrování', content: <RSA_decode /> },
